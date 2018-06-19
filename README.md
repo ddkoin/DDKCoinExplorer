@@ -1,8 +1,8 @@
 # DDKExplorer
-Describe brief description about ETP here
+Describe brief description about DDK Explorer here
 
 ## Prerequisite for DDK Explorer system
-This sections provides details on what you need install on your system in order to run ETP.
+This sections provides details on what you need install on your system in order to run Explorer.
 
 - ### Supported Plateforms:
 ```
@@ -15,7 +15,7 @@ Ubuntu 16.04 (LTS) x86_64
 sudo apt-get install -y python build-essential curl automake autoconf libtool
 ```
 
-- ### Git -- Used for cloning and updating ETP
+- ### Git -- Used for cloning and updating DDK Explorer
 ```
 sudo apt-get install -y git
 ```
@@ -30,7 +30,7 @@ sudo apt-get install -y nodejs
 ```
 curl -sL "https://downloads.lisk.io/scripts/setup_postgresql.Linux" | bash -
 sudo -u postgres createuser --createdb $USER
-sudo -u postgres createdb <database_name> //ETP_explorer in our system
+sudo -u postgres createdb <database_name> //DDK_explorer in our system
 sudo -u postgres psql -d <database_name> -c "alter user "$USER" with password 'password';"
 ```
 
