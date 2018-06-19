@@ -23,11 +23,10 @@
         "enabled": false
     },
     "modules": {
-        "accounts": "./modules/accounts.js"
+        "comments": "./modules/comments.js"
     },
     "api": {
-
-    },
-    "blockchainServerUri": "http://localhost:7000",
-    "elasticsearchHost": "localhost"
+        "users": "./api/users.js",
+        "comments": "./api/comments.js"
+    }
 }
