@@ -1,4 +1,5 @@
-/* ETP Memory Tables
+/** 
+ *   DDK Explorer Memory Tables
  *
  */
 

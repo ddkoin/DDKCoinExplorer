@@ -21,7 +21,6 @@ function CommentsAPIs(app, scope) {
         db: scope.db
     };
 
-    // Implement APIs Here
     app.get('/api/comments', function (req, res) {
         library.db.query(sql.getComments)
             .then(function (comments) {
