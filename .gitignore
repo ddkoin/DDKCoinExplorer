@@ -1,0 +1,6 @@
+npm-debug.log
+.env
+logs/
+node_modules/
+.vscode/
+config.json

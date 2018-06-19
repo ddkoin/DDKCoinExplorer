@@ -1,0 +1,33 @@
+{
+    "app": {
+        "port": 7003,
+        "address": "0.0.0.0"
+    },
+    "db": {
+        "host": "localhost",
+        "port": 5432,
+        "database": "DDK_explorer",
+        "user": "",
+        "password": "password",
+        "poolSize": 95,
+        "poolIdleTimeout": 30000,
+        "reapIntervalMillis": 1000
+    },
+    "cacheEnabled": true,
+    "redis": {
+        "host": "127.0.0.1",
+        "port": 6380,
+        "db": 0
+    },
+    "ssl": {
+        "enabled": false
+    },
+    "modules": {
+        "accounts": "./modules/accounts.js"
+    },
+    "api": {
+
+    },
+    "blockchainServerUri": "http://localhost:7000",
+    "elasticsearchHost": "localhost"
+}

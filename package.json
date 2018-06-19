@@ -1,0 +1,12 @@
+{
+  "name": "ddk-explorer",
+  "version": "1.0.0",
+  "description": "A public explorer for DDK Coin",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node app.js"
+  },
+  "author": "Hotam Singh, Navin Purohit, Monu Thakur",
+  "license": "ISC"
+}
