@@ -33,7 +33,6 @@ function CommentsAPIs(app, scope) {
 
     app.post('/api/comments', function (req, res) {
         count = count + 1;
-        //console.log('post comments');
         let commentsData = {
             content: req.body.content,
             created: req.body.created,
