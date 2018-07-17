@@ -1,0 +1,35 @@
+{
+    "app": {
+        "port": 7003,
+        "address": "0.0.0.0"
+    },
+    "db": {
+        "host": "159.65.135.70",
+        "port": 5432,
+        "database": "DDK_explorer",
+        "user": "",
+        "password": "password",
+        "poolSize": 95,
+        "poolIdleTimeout": 30000,
+        "reapIntervalMillis": 1000
+    },
+    "cacheEnabled": true,
+    "redis": {
+        "host": "159.65.131.229",
+        "port": 6380,
+        "db": 0
+    },
+    "ssl": {
+        "enabled": false
+    },
+    "modules": {
+        "accounts": "./modules/users.js",
+        "comments": "./modules/comments.js"
+    },
+    "api": {
+        "accounts": "./api/users.js",
+        "comments": "./api/comments.js"
+    },
+    "blockchainServerUri": "http://159.65.139.248:7000",
+    "elasticsearchHost": "localhost"
+}

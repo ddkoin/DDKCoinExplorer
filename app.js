@@ -28,7 +28,7 @@ let path = require('path');
 let async = require('async');
 const Logger = require('./logger.js');
 let utils = require('./helpers/utils');
-let appConfig = require('./config');
+let appConfig = require('./config.json');
 let env = require('./helpers/env');
 
 /**
