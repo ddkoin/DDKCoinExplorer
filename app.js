@@ -54,6 +54,7 @@ d.on('error', function (err) {
     let logman = new Logger();
     let logger = logman.logger;
     logger.error('error : ', err);
+    console.log(err);
     process.exit(0);
 });
 
@@ -186,6 +187,7 @@ d.run(function () {
 					d.on('error', function (err) {
 						scope.logger.error('error : ' , err);
 						scope.logger.error('Domain ' + name, { message: err.message, stack: err.stack });
+						console.log(err);
 					});
 
 					d.run(function () {
@@ -246,6 +248,7 @@ d.run(function () {
     }, function (err, scope) {
         if (err) {
             scope.logger.error('error : ', err);
+	    console.log(err);
             process.exit(0);
         }
     });

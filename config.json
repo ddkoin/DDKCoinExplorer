@@ -4,19 +4,19 @@
         "address": "0.0.0.0"
     },
     "db": {
-        "host": "159.65.135.70",
+        "host": "ddk-prod-application-db-cluster.cluster-co8hc4mf5osu.ap-southeast-1.rds.amazonaws.com",
         "port": 5432,
-        "database": "DDK_explorer",
-        "user": "",
-        "password": "password",
+        "database": "ddk_app_db",
+        "user": "ddk_app_db_user",
+        "password": "h1oednc#40[1D",
         "poolSize": 95,
         "poolIdleTimeout": 30000,
         "reapIntervalMillis": 1000
     },
     "cacheEnabled": true,
     "redis": {
-        "host": "159.65.131.229",
-        "port": 6380,
+        "host": "ddk-prod-redis.kuqhw8.ng.0001.apse1.cache.amazonaws.com",
+        "port": 6379,
         "db": 0
     },
     "ssl": {
@@ -30,6 +30,6 @@
         "accounts": "./api/users.js",
         "comments": "./api/comments.js"
     },
-    "blockchainServerUri": "http://159.65.139.248:7000",
-    "elasticsearchHost": "localhost"
+    "blockchainServerUri": "https://webwallet-w.ddkoin.com",
+    "elasticsearchHost": "https://vpc-ddk-es-32wbyx4zu5hb5udvelaf44sxlu.ap-southeast-1.es.amazonaws.com"
 }
