@@ -4,10 +4,10 @@
         "address": "0.0.0.0"
     },
     "db": {
-        "host": "159.65.135.70",
+        "host": "10.5.0.4",
         "port": 5432,
-        "database": "DDK_explorer",
-        "user": "",
+        "database": "ddk",
+        "user": "lisk",
         "password": "password",
         "poolSize": 95,
         "poolIdleTimeout": 30000,
@@ -15,8 +15,8 @@
     },
     "cacheEnabled": true,
     "redis": {
-        "host": "159.65.131.229",
-        "port": 6380,
+        "host": "10.5.0.3",
+        "port": 6379,
         "db": 0
     },
     "ssl": {
@@ -30,6 +30,6 @@
         "accounts": "./api/users.js",
         "comments": "./api/comments.js"
     },
-    "blockchainServerUri": "http://159.65.139.248:7000",
-    "elasticsearchHost": "localhost"
+    "blockchainServerUri": "http://localhost:7000",
+    "elasticsearchHost": "10.5.0.2"
 }
