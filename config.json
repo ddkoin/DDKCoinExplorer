@@ -4,7 +4,7 @@
         "address": "0.0.0.0"
     },
     "db": {
-        "host": "10.5.0.4",
+        "host": "10.6.0.4",
         "port": 5432,
         "database": "ddk",
         "user": "lisk",
@@ -15,7 +15,7 @@
     },
     "cacheEnabled": true,
     "redis": {
-        "host": "10.5.0.3",
+        "host": "10.6.0.3",
         "port": 6379,
         "db": 0
     },

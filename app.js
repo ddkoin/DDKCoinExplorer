@@ -31,6 +31,10 @@ let utils = require('./helpers/utils');
 let appConfig = require('./config.json');
 let env = require('./helpers/env');
 
+
+    let logman = new Logger();
+    let logger = logman.logger;
+
 /**
  * @desc The config object to handle DDKAdmin modules and DDKAdmin api.
  * @desc It loads `modules` and `api` folders content.
@@ -242,10 +246,19 @@ d.run(function () {
                     cb(err, scope.network);
                 }
             });
-        }]
+        }],
+
+        web: ['ready', function (scope, cb) {
+            scope.network.server.listen(7002, 'localhost', function (err) {
+                console.log('web');
+                require('./preloader-server.js');
+            });
+        }],
+
     }, function (err, scope) {
+        // TODO: fixme
         if (err) {
-            scope.logger.error('error : ', err);
+            logger.error('error : ', err);
             process.exit(0);
         }
     });

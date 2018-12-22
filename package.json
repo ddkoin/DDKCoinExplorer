@@ -19,6 +19,7 @@
     "ejs": "=2.5.5",
     "express": "^4.16.3",
     "http": "0.0.0",
+    "http-server": "^0.11.1",
     "node-cron": "^1.2.1",
     "node-cron-job": "^0.2.3",
     "pg-monitor": "=0.7.1",
