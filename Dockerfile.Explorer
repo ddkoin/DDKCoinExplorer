@@ -1,0 +1,10 @@
+FROM    node:8-alpine
+RUN     apk add --no-cache python curl bash automake autoconf libtool git alpine-sdk postgresql-dev
+
+USER root
+RUN     npm install --global npm@latest && \
+        npm install --global node-gyp@latest && \
+        npm install --global wait-port@latest
+
+RUN npm start
+
