@@ -36,8 +36,8 @@ let transport = new (winston.transports.DailyRotateFile)({
   }
 });
 
-/** 
- * @desc creating file transport to write archived logs into a file. 
+/**
+ * @desc creating file transport to write archived logs into a file.
  * @desc Only "archive" logs will be written in this file.
  * @property {filename} - i.e. 2018-06-14.log
  * @property {datePattern} - YYYY-MM-DD
@@ -58,10 +58,15 @@ let traceTransport = new (winston.transports.File)({
   }
 });
 
+const consoleTransport = new (winston.transports.Console)({
+  level: 'debug' ,
+});
+
 //Logger constructor
 class Logger {
   constructor(sessionId, address) {
     this.transport = transport;
+    this.consoleTransport = consoleTransport;
     this.transport.formatter = function (options) {
       if (sessionId && address) {
         return options.timestamp() + ' - ' + sessionId + ' - ' + address + ' - [' + options.level + '] : ' + options.message;
@@ -79,7 +84,7 @@ class Logger {
     };
     this.logger = new (winston.Logger)({
       levels: levels,
-      transports: [this.traceTransport, this.transport]
+      transports: [this.traceTransport, this.transport, this.consoleTransport]
     });
   }
 }

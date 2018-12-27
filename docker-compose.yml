@@ -1,0 +1,13 @@
+version: '2'
+services:
+  web:
+    build: ./
+    command: npm run start
+    volumes:
+      - ex-data:/usr/data/
+    ports:
+      - "7003:7003"
+    container_name: ddk_exp_c
+
+volumes:
+  ex-data:

@@ -5,13 +5,16 @@
   "main": "app.js",
   "scripts": {
     "test": "npm test",
-    "start": "node app.js"
+    "start": "node app.js",
+    "start_with_update": "npm i && node app.js",
+    "update": "npm i"
   },
   "author": "Hotam Singh, Navin Purohit, Monu Thakur",
   "license": "ISC",
   "dependencies": {
     "async": "=2.1.4",
     "auto-strict": "0.0.4",
+    "bluebird": "^3.5.3",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
     "cors": "=2.8.1",

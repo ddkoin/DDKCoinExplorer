@@ -23,15 +23,12 @@ const mimeType = {
 };
 
 http.createServer(function (req, res) {
-  console.log(`${req.method} ${req.url}`);
 
   const parsedUrl = url.parse(req.url);
   const sanitizePath = path.normalize( 'public/' + parsedUrl.pathname).replace(/^(\.\.[\/\\])+/, '');
 
-    console.log('sanitizePath', sanitizePath);
   let pathname =  path.join(__dirname, sanitizePath);
 
-    console.log('pathname' , pathname);
 
   fs.exists(pathname, function (exist) {
 
@@ -45,7 +42,6 @@ http.createServer(function (req, res) {
       pathname += 'index.html';
     }
 
-    console.log('pathname after' , pathname);
 
     // read file from file system
     fs.readFile(pathname, function(err, data){

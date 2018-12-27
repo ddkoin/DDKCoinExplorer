@@ -47,7 +47,6 @@ let env = require('./helpers/env');
  * @param {Object} env - Environment variables
  */
 appConfig = utils.merge(appConfig, env);
-
 /**
  * Creates the express server and loads all the Modules and logic.
  * @property {object} - Domain instance.
@@ -64,7 +63,7 @@ d.on('error', function (err) {
 d.run(function () {
     let modules = [];
     async.auto({
-        
+
         /**
 		 * @method config
 		 * @param {nodeStyleCallback} cb - Callback function with the mutated `appConfig`.
@@ -113,7 +112,7 @@ d.run(function () {
 			let cache = require('./helpers/cache.js');
 			cache.connect(scope.config.cacheEnabled, scope.config.redis, scope.logger, cb);
         }],
-        
+
         /**
 		 * @method network
 		 * @param {nodeStyleCallback} cb - Callback function with network configuration.
@@ -249,11 +248,11 @@ d.run(function () {
         }],
 
         web: ['ready', function (scope, cb) {
-            scope.network.server.listen(7002, 'localhost', function (err) {
-                console.log('web');
-                require('./preloader-server.js');
+            scope.network.server.listen(3000, 'localhost', function (err) {
+              require('./preloader-server.js');
+              cb();
             });
-        }],
+        }]
 
     }, function (err, scope) {
         // TODO: fixme
