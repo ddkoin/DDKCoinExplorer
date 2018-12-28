@@ -4,7 +4,7 @@
         "address": "0.0.0.0"
     },
     "db": {
-        "host": "31.28.161.187",
+        "host": "10.6.0.4",
         "port": 5432,
         "database": "ddk",
         "user": "lisk",
@@ -15,7 +15,7 @@
     },
     "cacheEnabled": true,
     "redis": {
-        "host": "31.28.161.187",
+        "host": "10.6.0.3",
         "port": 6379,
         "db": 0
     },
@@ -30,6 +30,6 @@
         "accounts": "./api/users.js",
         "comments": "./api/comments.js"
     },
-    "blockchainServerUri": "31.28.161.187:7000",
-    "elasticsearchHost": "31.28.161.187"
+    "blockchainServerUri": "10.6.0.6:7000",
+    "elasticsearchHost": "10.6.0.2"
 }
